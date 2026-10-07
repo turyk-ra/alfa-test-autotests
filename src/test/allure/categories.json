@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Известные дефекты",
+    "matchedStatuses": ["failed"],
+    "messageRegex": "(?s).*\\(D-\\d+\\).*"
+  },
+  {
+    "name": "Новые падения проверок",
+    "matchedStatuses": ["failed"]
+  },
+  {
+    "name": "Сломанные тесты и окружение",
+    "matchedStatuses": ["broken"]
+  }
+]
