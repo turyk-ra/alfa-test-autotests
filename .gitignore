@@ -1,0 +1,20 @@
+# Maven
+target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# macOS
+.DS_Store
+
+# Allure
+allure-results/
+allure-report/
+
+# Локальные настройки окружения (пути, устройство)
+*.local.properties
+
+# Allure: скачанный генератор отчёта и история прогонов
+.allure/
