@@ -17,12 +17,12 @@ public final class DataProviders {
     }
 
     @DataProvider(name = "validCredentials")
-    public static Object[][] validCredentials(){
+    public static Object[][] validCredentials() {
         return new Object[][]{
-                {"TC-03 логин как в требованиях","Login"},
-                {"TC-06 логин строчными (D-9)","login"},
-                {"TC-06 логин заглавными (D-9)","LOGIN"},
-                {"TC-06 логин вперемешку (D-9)","lOgIn"},
+                {"TC-03 логин как в требованиях", "Login"},
+                {"TC-06 логин строчными (D-9)", "login"},
+                {"TC-06 логин заглавными (D-9)", "LOGIN"},
+                {"TC-06 логин вперемешку (D-9)", "lOgIn"},
         };
     }
 }

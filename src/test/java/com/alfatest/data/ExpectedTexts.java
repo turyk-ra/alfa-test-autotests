@@ -8,7 +8,7 @@ public final class ExpectedTexts {
 
     public static final Pattern WRONG_CREDENTIALS = Pattern.compile("^Введены неверные данные$");
 
-    // текстов валидаций в требованиях нет, взяли свои (см. A-1 в docs/questions.csv)
+    // текстов валидаций в требованиях нет, взяли свои
     public static final Pattern LOGIN_REQUIRED = Pattern.compile("^Введите логин$");
     public static final Pattern PASSWORD_REQUIRED = Pattern.compile("^Введите пароль$");
 

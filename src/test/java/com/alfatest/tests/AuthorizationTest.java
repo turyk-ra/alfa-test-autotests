@@ -19,8 +19,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Feature("Вход в приложение")
 public class AuthorizationTest extends BaseTest {
 
-    @Test(description = "TC-03, TC-06 Успешная авторизация, регистр логина не учитывается"
-            , dataProvider = "validCredentials", dataProviderClass = DataProviders.class)
+    @Test(description = "TC-03, TC-06 Успешная авторизация, регистр логина не учитывается",
+            dataProvider = "validCredentials", dataProviderClass = DataProviders.class)
     @Severity(SeverityLevel.BLOCKER)
     @Description("После входа открывается экран 'Вход в Alfa-Test выполнен'. Регистр логина не учитывается, "
             + "наборы TC-06 падают на D-9")
@@ -67,10 +67,11 @@ public class AuthorizationTest extends BaseTest {
     public void loginWithEmptyFields() {
         LoginPage loginPage = new LoginPage().tapLoginButton();
 
+        assertThat(loginPage.isOpened())
+                .as("Остались на экране авторизации")
+                .isTrue();
+
         SoftAssertions.assertSoftly(softly -> {
-            softly.assertThat(loginPage.isOpened())
-                    .as("Остались на экране авторизации")
-                    .isTrue();
             softly.assertThat(loginPage.waitForMessage(ExpectedTexts.LOGIN_REQUIRED))
                     .as("Показано «Введите логин» (D-6)")
                     .isTrue();
